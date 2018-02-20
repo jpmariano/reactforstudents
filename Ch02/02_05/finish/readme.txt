@@ -2,10 +2,12 @@ Webpack - bundler
 
 1. Creaete webpack configuration 
 var webpack = require("webpack");
+var path = require("path");
+
 module.exports = {
 	entry: "./src/index.js", //Entry Point
 	output: {
-		path: "dist/assets",
+		path: path.resolve(__dirname, "dist/assets"),
 		filename: "bundle.js", //Output 
 		publicPath: "assets"
 	},

@@ -50,7 +50,7 @@ export class App extends Component {
 			 (this.props.location.pathname === "/add-day") ?
 			 	<AddDayForm /> :
 			 	<SkiDayList days={this.state.allSkiDays}
-			 				filter={this.props.params.filter}/>				 
+			 				filter={this.props.params.filter}/>	//Grab the URL to pass as a filter when this component gets called from index.js			 
 			}
 					
 			</div>

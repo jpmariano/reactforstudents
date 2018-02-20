@@ -1,6 +1,6 @@
-sudo install -g babel-cli
+sudo npm install -g babel-cli
 
-
+//.babelrc manually created
 .babelrc - Tells babel how to transpile
 
 

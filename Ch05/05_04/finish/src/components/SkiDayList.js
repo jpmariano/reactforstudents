@@ -3,9 +3,10 @@ import SnowFlake from 'react-icons/lib/ti/weather-snow'
 import Calendar from 'react-icons/lib/fa/calendar'
 import { SkiDayRow } from './SkiDayRow'
 import { PropTypes } from 'react'
-import { Link } from 'react-router'
+import { Link } from 'react-router' //1. Import the Link
 
 export const SkiDayList = ({days, filter}) => {
+  //3. Create a Dynamic variable
   const filteredDays = (!filter || 
   		!filter.match(/powder|backcountry/))?
   		days:
@@ -22,7 +23,7 @@ export const SkiDayList = ({days, filter}) => {
 				<th>Backcountry</th>
 			</tr>
 			<tr>
-				<td colSpan={4}>
+				<td colSpan={4}> {/* 2. Create the link */}
 					<Link to="/list-days">
 						All Days
 					</Link>
@@ -36,6 +37,7 @@ export const SkiDayList = ({days, filter}) => {
 			</tr>
 		</thead>
 		<tbody>
+		    {/*4. Use the Filter - See App.js*/}
 			{filteredDays.map((day, i) =>
 				<SkiDayRow key={i}
 						   {...day}/>	

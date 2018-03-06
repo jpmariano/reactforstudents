@@ -21,7 +21,7 @@ export const SkiDayRow = ({resort, date,
 	</tr>						
 
 )
-
+//Two Way Binding
 SkiDayRow.propTypes = {
 	resort: PropTypes.string.isRequired,
 	date: PropTypes.string.isRequired,

@@ -4,9 +4,9 @@ export const AddDayForm = ({ resort,
 							 date, 
 							 powder, 
 							 backcountry }) => {
-	
+	//1. Create a variables
 	let _resort, _date, _powder, _backcountry
-	
+	//2. create an method submit
 	const submit = (e) => {
 		e.preventDefault()
 		console.log('resort', _resort.value)
@@ -17,6 +17,7 @@ export const AddDayForm = ({ resort,
 	}
 
 	return (
+		//3. onSubmit call the submit method
 		<form onSubmit={submit} className="add-day-form">
 
 			<label htmlFor="resort">Resort Name</label>
@@ -24,7 +25,7 @@ export const AddDayForm = ({ resort,
 				   type="text" 
 				   required 
 				   defaultValue={resort}
-				   ref={input => _resort = input}/>
+				   ref={input => _resort = input}/>{/*4. takes an input and set the _resort = input*/}
 
 			<label htmlFor="date">Date</label>
 			<input id="date" 

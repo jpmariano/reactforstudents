@@ -19,7 +19,7 @@ export class App extends Component {
 		}
 		this.addDay = this.addDay.bind(this)
 	}
-
+     // Called by onNewDay and set the allSkiDays and updates all componets with the allSkiDays
 	addDay(newDay) {
 		this.setState({
 			allSkiDays: [

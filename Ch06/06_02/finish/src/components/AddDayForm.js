@@ -4,9 +4,10 @@ export class AddDayForm extends Component {
 	
 	constructor(props) {
 		super(props)
+		//2. Declare submit method
 		this.submit = this.submit.bind(this)
 	}
-
+    //1. Creating a submit method
 	submit(e) {
 		e.preventDefault()
 		console.log('resort', this.refs.resort.value)
@@ -21,6 +22,7 @@ export class AddDayForm extends Component {
 		const { resort, date, powder, backcountry } = this.props 
 
 		return (
+			//3. use the onSubmit to call the this.submit
 			<form onSubmit={this.submit} className="add-day-form">
 
 				<label htmlFor="resort">Resort Name</label>
@@ -28,7 +30,7 @@ export class AddDayForm extends Component {
 					   type="text" 
 					   required 
 					   defaultValue={resort}
-					   ref="resort"/>
+					   ref="resort"/> {/*4. tag them using ref*/}
 
 				<label htmlFor="date">Date</label>
 				<input id="date" 

@@ -1,5 +1,5 @@
 import { PropTypes, Component } from 'react'
-
+//Create a list for Auto complete
 const tahoeResorts = [
 	"Alpine Meadows",
 	"Boreal",
@@ -15,11 +15,11 @@ const tahoeResorts = [
 ]
 
 class Autocomplete extends Component {
-	
+	//Grab the value of ref
 	get value() {
 		return this.refs.inputResort.value
 	}
-
+    //Set the Value of the ref
 	set value(inputValue) {
 		this.refs.inputResort.value = inputValue
 	}
@@ -27,13 +27,13 @@ class Autocomplete extends Component {
 	render() {
 		return (
 			<div>
-				<input ref="inputResort"
+				<input ref="inputResort" 
 					   type="text" 
-					   list="tahoe-resorts" />
-				<datalist id="tahoe-resorts">
+					   list="tahoe-resorts" /> {/* inputResort */} 
+				<datalist id="tahoe-resorts"> {/*datalist allows for auto complete*/}
 					{this.props.options.map(
 						(opt, i) => 
-						<option key={i}>{opt}</option>)}
+						<option key={i}>{opt}</option>)} {/*loops through tahoeResorts and create the options list*/}
 				</datalist>
 			</div>
 		)
@@ -69,7 +69,7 @@ export const AddDayForm = ({ resort,
 		<form onSubmit={submit} className="add-day-form">
 
 			<label htmlFor="resort">Resort Name</label>
-			<Autocomplete options={tahoeResorts}
+			<Autocomplete options={tahoeResorts} //Pass the tahoeResorts
 				   		  ref={input => _resort = input}/>
 
 			<label htmlFor="date">Date</label>

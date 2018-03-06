@@ -10,12 +10,14 @@ export const AddDayForm = ({ resort,
 	
 	const submit = (e) => {
 		e.preventDefault()
-		onNewDay({
+		//Execute the onNewDay 
+		onNewDay({ //This function is passed from app.js; Means that the data goes to parent component
 			resort: _resort.value,
 			date: _date.value,
 			powder: _powder.checked,
 			backcountry: _backcountry.checked
 		})
+		//Reset Form after submit
 		_resort.value = ''
 		_date.value = ''
 		_powder.checked = false
@@ -24,6 +26,8 @@ export const AddDayForm = ({ resort,
 	}
 
 	return (
+
+		//call submit from onSubmit
 		<form onSubmit={submit} className="add-day-form">
 
 			<label htmlFor="resort">Resort Name</label>

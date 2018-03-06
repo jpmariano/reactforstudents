@@ -2,7 +2,7 @@ import { PropTypes, Component } from 'react'
 
 export class AddDayForm extends Component {
 	render() {
-
+		//2. Declare props here and use it here defaultValue={resort}
 		const { resort, date, powder, backcountry } = this.props 
 
 		return (
@@ -39,7 +39,7 @@ export class AddDayForm extends Component {
 		)
 	}
 }
-
+//1. Create Default Props
 AddDayForm.defaultProps = {
 	resort: "Kirkwood",
 	date: "2017-02-12",
